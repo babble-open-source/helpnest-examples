@@ -6,7 +6,7 @@ Deploy HelpNest's Next.js app to Vercel with a managed database.
 
 ## One-click deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/helpnest/helpnest&project-name=helpnest&repository-name=helpnest)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/babble-open-source/helpnest&project-name=helpnest&repository-name=helpnest)
 
 ## Manual deploy
 
@@ -24,7 +24,7 @@ Deploy HelpNest's Next.js app to Vercel with a managed database.
 
 ```bash
 npm i -g vercel
-git clone https://github.com/helpnest/helpnest.git
+git clone https://github.com/babble-open-source/helpnest.git
 cd helpnest
 vercel --cwd apps/web
 ```

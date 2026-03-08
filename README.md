@@ -1,6 +1,6 @@
 # HelpNest Examples
 
-Deploy examples for [HelpNest](https://github.com/helpnest/helpnest) — the open-source customer help center.
+Deploy examples for [HelpNest](https://github.com/babble-open-source/helpnest) — the open-source customer help center.
 
 ## Deployment Options
 
@@ -25,13 +25,13 @@ The simplest self-hosted option. Runs everything (app, postgres, redis, qdrant) 
 
 ```bash
 # Option A — use the HelpNest setup script
-git clone https://github.com/helpnest/helpnest.git
+git clone https://github.com/babble-open-source/helpnest.git
 cd helpnest
 chmod +x scripts/self-host-setup.sh
 ./scripts/self-host-setup.sh
 
 # Option B — use the compose file from this repo
-git clone https://github.com/helpnest/helpnest-examples.git
+git clone https://github.com/babble-open-source/helpnest-examples.git
 cd helpnest-examples/docker
 cp .env.example .env
 # Edit .env with your values
@@ -54,7 +54,7 @@ See [railway/README.md](./railway/README.md) for full details.
 
 ## Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/helpnest/helpnest&project-name=helpnest&repository-name=helpnest)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/babble-open-source/helpnest&project-name=helpnest&repository-name=helpnest)
 
 Deploy the Next.js app to Vercel with a managed PostgreSQL (Neon or Supabase).
 

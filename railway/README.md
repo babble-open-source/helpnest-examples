@@ -10,7 +10,7 @@ Deploy HelpNest to Railway in ~3 minutes with managed PostgreSQL and Redis.
 
 ### 1. Fork the repo
 
-Fork [helpnest/helpnest](https://github.com/helpnest/helpnest) to your GitHub account.
+Fork [helpnest/helpnest](https://github.com/babble-open-source/helpnest) to your GitHub account.
 
 ### 2. Create a Railway project
 

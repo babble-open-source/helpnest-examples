@@ -4,13 +4,13 @@ Deploy HelpNest to Render using the Blueprint. Render provisions the app, Postgr
 
 ## One-click deploy
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/helpnest/helpnest-examples)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/babble-open-source/helpnest-examples)
 
 ## Manual deploy
 
 ### 1. Fork the repo
 
-Fork [helpnest/helpnest](https://github.com/helpnest/helpnest) to your GitHub account.
+Fork [helpnest/helpnest](https://github.com/babble-open-source/helpnest) to your GitHub account.
 
 ### 2. Create a Blueprint
 

@@ -12,7 +12,7 @@ Self-host HelpNest on any server with Docker Compose.
 ## Quick start
 
 ```bash
-git clone https://github.com/helpnest/helpnest-examples.git
+git clone https://github.com/babble-open-source/helpnest-examples.git
 cd helpnest-examples/docker
 cp .env.example .env
 ```
