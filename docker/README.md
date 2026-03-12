@@ -1,6 +1,6 @@
 # HelpNest — Docker Deploy
 
-Self-host HelpNest on any server with Docker Compose.
+Self-host HelpNest on any server with Docker Compose — including the AI agent, escalation inbox, and knowledge gap tracking.
 
 ## What's included
 
@@ -42,7 +42,33 @@ Run database migrations after the first start:
 docker exec helpnest_app npx prisma migrate deploy
 ```
 
-Then open the dashboard at `/dashboard` and create your first workspace.
+Then seed demo data (optional):
+
+```bash
+docker exec helpnest_app node /app/packages/db/prisma/seed.js
+```
+
+Open the dashboard at `http://localhost:3000/dashboard` and sign in.
+
+## Enabling the AI Agent
+
+After your first login:
+
+1. Go to **Settings → AI Agent**
+2. Toggle **Enable AI Agent** on
+3. Choose your **AI Provider** — Anthropic, OpenAI, Google, or Mistral
+4. Enter the **Model** name (e.g. `claude-sonnet-4-5`, `gpt-4o`, `gemini-2.0-flash`)
+5. Paste your **API Key** for that provider
+6. Click **Save**
+
+For vector search (semantic article search), also set these in your `.env`:
+
+```env
+OPENAI_API_KEY=sk-...         # for embedding articles
+QDRANT_URL=http://qdrant:6333  # already included in docker-compose
+```
+
+Then re-sync your article embeddings from **Dashboard → Settings → Search**.
 
 ## Updating HelpNest
 

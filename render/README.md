@@ -37,6 +37,26 @@ npx prisma migrate deploy
 
 Render → Settings → Custom Domains → add your domain → update DNS.
 
+## Enabling the AI Agent
+
+After your first login:
+
+1. Go to **Dashboard → Settings → AI Agent**
+2. Toggle **Enable AI Agent** on
+3. Choose your **AI Provider** (Anthropic, OpenAI, Google, or Mistral)
+4. Enter the **Model** name (e.g. `claude-sonnet-4-5`, `gpt-4o`, `gemini-2.0-flash`)
+5. Paste your **API Key** for that provider
+6. Click **Save**
+
+For vector search, add to your Render environment variables:
+
+```env
+OPENAI_API_KEY=sk-...
+QDRANT_URL=https://...   # use Qdrant Cloud free tier
+```
+
+---
+
 ## Services created
 
 | Service | Type | Render plan |

@@ -55,16 +55,17 @@ GITHUB_CLIENT_SECRET=
 > In your GitHub OAuth app settings, set the callback URL to:
 > `https://<your-app>.up.railway.app/api/auth/callback/github`
 
-#### Optional — AI search (semantic / RAG)
+#### Optional — AI vector search (semantic / RAG)
 
 Without these, HelpNest falls back to Postgres full-text search.
 
 ```env
-OPENAI_API_KEY=sk-...
-ANTHROPIC_API_KEY=sk-ant-...
-QDRANT_URL=https://...       # Qdrant Cloud free tier works
-QDRANT_API_KEY=              # if your Qdrant instance requires auth
+OPENAI_API_KEY=sk-...         # for embedding articles into vectors
+QDRANT_URL=https://...        # Qdrant Cloud free tier works
+QDRANT_API_KEY=               # if your Qdrant instance requires auth
 ```
+
+> **AI chat provider keys** (Anthropic, OpenAI, Google, Mistral) are configured per-workspace inside the dashboard — not here. See **Enabling the AI Agent** below.
 
 #### Optional — Image uploads (S3-compatible)
 
@@ -149,6 +150,21 @@ HELPNEST_CUSTOM_DOMAIN_SLUG=acme
 ```
 
 The middleware rewrites `support.acme.com` → `/acme/help` transparently.
+
+---
+
+## Enabling the AI Agent
+
+After your first login:
+
+1. Go to **Dashboard → Settings → AI Agent**
+2. Toggle **Enable AI Agent** on
+3. Choose your **AI Provider** (Anthropic, OpenAI, Google, or Mistral)
+4. Enter the **Model** name (e.g. `claude-sonnet-4-5`, `gpt-4o`, `gemini-2.0-flash`)
+5. Paste your **API Key** for that provider
+6. Click **Save**
+
+Your widget will now respond with conversational AI answers. Escalated conversations land in **Dashboard → Inbox**.
 
 ---
 
